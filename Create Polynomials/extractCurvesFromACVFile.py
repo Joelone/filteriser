@@ -6,7 +6,8 @@ DESCRIPTION
     There are three curves (one per RGB channel) which you can later 
     use to make a custom filter for your image.
     
-    See www.linktotumblrpost.com for the theory behind this method.
+    See http://www.weemoapps.com/creating-retro-and-analog-image-filters-in-mobile-apps 
+    for the theory behind this method.
 
 USAGE
 
@@ -19,7 +20,7 @@ AUTHOR
 
 LICENSE
 
-    This script is in the public domain, free from copyrights or restrictions.
+    Do whatever you want, but please mention this code in your code if you modify it.
 
 VERSION
 
@@ -29,7 +30,6 @@ VERSION
 import sys, os, traceback, optparse, time
 from struct import unpack
 from scipy import interpolate
-import pylab
 import numpy as np
         
 def read_curve(acv_file):
@@ -51,7 +51,12 @@ def return_polynomial_coefficients(curve_list):
 	#print coefficients
 
 def main ():
-	acv_file = open('Country.acv', "rb")
+	if (len(sys.argv) != 1):
+			acv_file = open(sys.argv[1], "rb")
+	else:
+		print "Wrong args. Usage: python extractCurvesFromACVFile.py curveFile.acv"
+		os._exit(1)
+		
 	_, nr_curves = unpack("!hh", acv_file.read(4))
 	curves = []
 	for i in range(nr_curves):
