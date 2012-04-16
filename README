@@ -1,8 +1,16 @@
-With the files that are inside here, you can start creating your own filters like the ones you see in Apps like Instagram, Hipstamatic etc.
+*****
+Intro
+*****
+Using this code, you can start creating your own filters like the ones you see in Apps like Instagram, Hipstamatic etc.
 
-What you need is Python, and some curve files.
+What you need is Python, and some curve files. To get you started there is already a sample curve file ( Country.acv ) inside the repo.
 
-Curve files are some special Photoshop files that alter the appearance of the image. You can find lots of them for free, and there is no need to have Photoshop installed.
+Curve files are some special Photoshop files that alter the appearance of the image. You can find lots of them for free, and there is no need to have Photoshop installed in order to create filters from them.
+
+
+*************
+How to use it
+*************
 
 Using the extractCurvesFromACVFile.py Python code, you can extract the polynomials you need, and then you can use them in your code to alter the image. 
 
@@ -12,3 +20,6 @@ http://www.weemoapps.com/creating-retro-and-analog-image-filters-in-mobile-apps
 Warning: The iPhone code is slow and unoptimized. It is mainly intented as a proof of concept.
 There are many ways to make it better, if you want to help here are the discussions:
 https://github.com/WeemoApps/filteriser/wiki
+
+
+PS. WP7 example to follow soon.
