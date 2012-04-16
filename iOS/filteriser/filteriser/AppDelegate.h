@@ -1,6 +1,5 @@
 /*
-UIImage+Filterise.h
-
+ 
 DESCRIPTION
 Use these UIImage additions to render the filters you want to use. Use the python tool to extract
 the polynomial values that are used in the sampleFilter method.
@@ -20,14 +19,10 @@ VERSION
 0.1
 */
 
+#import <UIKit/UIKit.h>
 
-#import <Foundation/Foundation.h>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@interface UIImage(Filter)
-//Filters
-+ (UIImage *) sampleFilter:(UIImage *)original;
+@property (strong, nonatomic) UIWindow *window;
 
-//Utilities
-+ (double) normalisePixelValue:(double)value;
 @end
-

@@ -1,5 +1,4 @@
 /*
-UIImage+Filterise.h
 
 DESCRIPTION
 Use these UIImage additions to render the filters you want to use. Use the python tool to extract
@@ -20,14 +19,13 @@ VERSION
 0.1
 */
 
+#import <UIKit/UIKit.h>
 
-#import <Foundation/Foundation.h>
+#import "AppDelegate.h"
 
-@interface UIImage(Filter)
-//Filters
-+ (UIImage *) sampleFilter:(UIImage *)original;
-
-//Utilities
-+ (double) normalisePixelValue:(double)value;
-@end
-
+int main(int argc, char *argv[])
+{
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    }
+}
